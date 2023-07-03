@@ -2,7 +2,7 @@
 
 Slim bindings for [ExoPlayer](https://github.com/google/ExoPlayer). Using the awesome [Xamarin.Binding.Helpers](https://github.com/Redth/Xamarin.Binding.Helpers) from Jonathan Dick ([@Redth](https://github.com/Redth)).
 
-As this is a slim binding library, this repository is NOT aiming for full API coverage. Please see the java code located in https://github.com/thisisthekap/Xamarin.ExoPlayerSlim/tree/main/java/ExoPlayerSlim/exoplayerslim/src/main/java/com/tonestro/exoplayerslim on how the slim binding uses ExoPlayer.
+As this is a slim binding library, this repository is NOT aiming for full API coverage. Please see the java code located in https://github.com/thisisthekap/Tonestro.Maui.ExoPlayerSlim/tree/master/java/ExoPlayerSlim/exoplayerslim/src/main/java/com/tonestro/exoplayerslim on how the slim binding uses ExoPlayer.
 
 ## NuGet Feed
 
