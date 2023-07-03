@@ -6,6 +6,15 @@
     <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
   <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageId>Xamarin.ExoPlayerSlim</PackageId>
+    <Version>2.18.6.1</Version>
+    <Description>Contains bindings for https://exoplayer.dev</Description>
+    <Authors>Christian Kapplmüller</Authors>
+    <Company>fun.music IT GmbH</Company>
+    <PackageOutputPath>nugetoutput</PackageOutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
     <ExoPlayerJavaProjectPath>$(MSBuildProjectDirectory)\..\java\ExoPlayerSlim</ExoPlayerJavaProjectPath>
   </PropertyGroup>
   <ItemGroup>
