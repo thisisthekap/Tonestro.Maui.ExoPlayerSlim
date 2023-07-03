@@ -10,6 +10,8 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.ExoPlayerSlim" Version="2.18.7.2" />
+    <PackageReference Include="Tonestro.Maui.ExoPlayerSlim">
+      <Version>2.18.7.3</Version>
+    </PackageReference>
   </ItemGroup>
 </Project>
