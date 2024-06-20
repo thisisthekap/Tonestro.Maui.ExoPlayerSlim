@@ -27,6 +27,12 @@ steps:
   displayName: Restore Workloads
 
 - bash: |
+    cd java/exoplayerslim
+    ./gradlew build
+    cd ../..
+  displayName: Gradle Build
+
+- bash: |
     cd Tonestro.Maui.ExoPlayerSlim
     dotnet build -c Release
     dotnet pack -c Release
