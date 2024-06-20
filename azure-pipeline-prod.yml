@@ -36,7 +36,7 @@ steps:
 - bash: |
     cd Tonestro.Maui.ExoPlayerSlim/nugetoutput
     numberOfNugetFiles=$(ls *.nupkg | wc -l)
-    if [[ numberOfNugetFiles != 1 ]]; then
+    if [[ numberOfNugetFiles -ne 1 ]]; then
       echo "WRONG NUMBER OF NUGET FILES: ${numberOfNugetFiles}"
       exit 1
     fi
