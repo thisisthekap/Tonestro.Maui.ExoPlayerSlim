@@ -1,8 +1,15 @@
-pr:
-  - main
+trigger:
+  branches:
+    include:
+      - refs/tags/release-bindings-v*
+
+pr: none
 
 pool:
   vmImage: 'macOS-13'
+
+variables:
+  - group: nuget.org
 
 steps:
 
@@ -51,3 +58,19 @@ steps:
     ArtifactName: 'nugetoutput'
     publishLocation: 'Container'
     StoreAsTar: true
+
+- bash: |
+    dotnet nuget push Tonestro.Maui.ExoPlayerSlim/nugetoutput/Tonestro.Maui.ExoPlayerSlim.*.nupkg -k "$(nugetOrgApiKey)" -s https://api.nuget.org/v3/index.json
+
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'github.com_thisisthekap'
+    repositoryName: 'thisisthekap/Tonestro.Maui.ExoPlayerSlim'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'userSpecifiedTag'
+    tag: '$(Build.SourceBranchName)'
+    title: 'Tonestro.Maui.ExoPlayerSlim $(bindingsVersion)'
+    assets: 'Tonestro.Maui.ExoPlayerSlim/nugetoutput/Tonestro.Maui.ExoPlayerSlim.*.nupkg'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'issueBased'

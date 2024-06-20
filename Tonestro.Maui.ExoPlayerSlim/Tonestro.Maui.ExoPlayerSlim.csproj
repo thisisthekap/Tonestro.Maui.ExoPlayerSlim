@@ -1,32 +1,37 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net7.0-android</TargetFramework>
-    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
-    <Nullable>disable</Nullable>
-    <ImplicitUsings>disable</ImplicitUsings>
-  </PropertyGroup>
-  <PropertyGroup>
-    <IsPackable>true</IsPackable>
-    <PackageId>Tonestro.Maui.ExoPlayerSlim</PackageId>
-    <Version>2.18.7.3</Version>
-    <Description>Contains bindings for https://exoplayer.dev</Description>
-    <Authors>Christian Kapplmüller</Authors>
-    <Company>fun.music IT GmbH</Company>
-    <PackageOutputPath>nugetoutput</PackageOutputPath>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ExoPlayerJavaProjectPath>$(MSBuildProjectDirectory)\..\java\ExoPlayerSlim</ExoPlayerJavaProjectPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Binding.Helpers" Version="0.2.0-preview.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.4" />
-    <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.3.0.1" />
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1.3" />
-    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidStudioProject Include="$(ExoPlayerJavaProjectPath)" Module="exoplayerslim" GenerateBinding="True" />
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <PackageId>Tonestro.Maui.ExoPlayerSlim</PackageId>
+        <Version>2.18.6.3</Version>
+        <Description>Contains bindings for https://exoplayer.dev</Description>
+        <Authors>Christian Kapplmüller</Authors>
+        <Company>fun.music IT GmbH</Company>
+        <PackageOutputPath>nugetoutput</PackageOutputPath>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Maui.BindingExtensions" Version="0.0.1-pre4"/>
+    </ItemGroup>
+    <ItemGroup>
+        <GradleProjectReference Include="../java/exoplayerslim">
+            <ModuleName>exoplayerslim</ModuleName>
+        </GradleProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidLibrary Include="../java/exoplayerslim/exoplayerslim/build/outputs/deps/exoplayer-*.aar">
+            <Bind>false</Bind>
+            <Pack>true</Pack>
+        </AndroidLibrary>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.4" />
+        <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.3.0.1" />
+        <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1.3" />
+        <PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.4" />
+    </ItemGroup>
 </Project>
