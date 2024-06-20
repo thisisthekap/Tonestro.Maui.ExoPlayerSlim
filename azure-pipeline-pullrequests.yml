@@ -1,5 +1,5 @@
 pr:
-  - main
+  - master
 
 pool:
   vmImage: 'macOS-13'
