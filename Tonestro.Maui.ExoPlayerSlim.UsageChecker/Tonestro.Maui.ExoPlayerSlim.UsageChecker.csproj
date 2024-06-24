@@ -10,6 +10,6 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Tonestro.Maui.ExoPlayerSlim" Version="2.18.6.5" />
+    <PackageReference Include="Tonestro.Maui.ExoPlayerSlim" Version="2.18.6.6" />
   </ItemGroup>
 </Project>
