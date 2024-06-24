@@ -15,7 +15,9 @@
         <PackageOutputPath>nugetoutput</PackageOutputPath>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="CommunityToolkit.Maui.BindingExtensions" Version="0.0.1-pre4"/>
+        <PackageReference Include="CommunityToolkit.Maui.BindingExtensions" Version="0.0.1-pre4">
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <GradleProjectReference Include="../java/exoplayerslim">
@@ -29,9 +31,9 @@
         </AndroidLibrary>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.4" />
-        <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.3.0.1" />
-        <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1.3" />
-        <PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.4" />
+        <PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.4"/>
+        <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.3.0.1"/>
+        <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1.3"/>
+        <PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.4"/>
     </ItemGroup>
 </Project>
